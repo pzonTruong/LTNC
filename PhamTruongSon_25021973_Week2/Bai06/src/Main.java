@@ -6,7 +6,7 @@ public class Main{
 
         System.out.println("Testing");
         Transaction[] stolen = myAcc.getHistory();
-
+        // trying to modify the history of myAcc
         stolen[0] = null; // Ko dc
         // stolen[1].amount = 9999999; -> Khong dc
         myAcc.displayHistory();

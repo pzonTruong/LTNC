@@ -5,12 +5,15 @@ public class Book {
     private String author;
     private double price;
 
+
+    // constructor
     public Book(String title, String author, double price) {
         this.setTitle(title);
         this.setAuthor(author);
         this.setPrice(price);
     }
 
+    // getter and setter
     public void setTitle(String title) {
         this.title = title;
     }
@@ -39,6 +42,7 @@ public class Book {
         return price;
     }
 
+    
     @Override
     public boolean equals(Object obj){
         if (this == obj){
