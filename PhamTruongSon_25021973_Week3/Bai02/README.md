@@ -1,10 +1,7 @@
 # Mo ta loi giai
 
-## Tom tat y tuong chinh cua loi giai
-(Dien y tuong cua ban tai day)
-
-## Ly do lua chon huong tiep can nay? Uu diem so voi cac cach khac
-(Dien ly do cua ban tai day)
+Quan sát xem con Vịt (Duck) kêu như thế nào? Tại sao nó lại kêu như vậy?
+Ans: Con vịt sẽ kêu ra "Animal sound" do lớp Duck thừa kế method makeSound() nhưng không override nên sẽ trả method makeSound() mặc định từ trước.
 
 ## Cach chay
 Chay lenh: ./run.sh
