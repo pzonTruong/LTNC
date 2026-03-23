@@ -1,0 +1,3 @@
+interface CanConnectWifi {
+    void setupWifi();
+}

@@ -19,6 +19,7 @@ public class Main {
             else if (type.equals("AR")) factoryList.add(new AmphibiousRobot(id, name));
         }
 
+        
         // Duyệt danh sách và kiểm tra kỹ năng
         System.out.println("---OUTPUT---");
         for (Robot r : factoryList) {

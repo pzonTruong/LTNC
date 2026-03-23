@@ -1,0 +1,2 @@
+**Question**: Class Employee có bắt buộc phải implement hàm work() của interface không? (Thử nghiệm để trả lời).
+*Ans*: Không bắt buộc, miễn class Employee là abstract, class abstract sẽ tự động implements IWorkable cho các class con dựa vào khuôn của nó.

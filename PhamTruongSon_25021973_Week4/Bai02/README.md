@@ -1,0 +1,2 @@
+**Question**: Vì ActionCharacter đã có hàm fight(), lớp Hero có cần implement lại fight() của interface CanFight không? Hãy thử nghiệm.
+*Ans*: Không cần viết lại hàm fight() vì đã kế thừa từ ActionCharacter
