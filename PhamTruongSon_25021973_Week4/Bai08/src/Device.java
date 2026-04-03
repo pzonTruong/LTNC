@@ -1,4 +1,4 @@
-abstract class Device{
+abstract class Device {
     protected String id;
     protected String name;
     protected boolean isOn;
