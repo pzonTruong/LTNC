@@ -1,0 +1,5 @@
+
+interface Checkbox {
+
+    void render();
+}
