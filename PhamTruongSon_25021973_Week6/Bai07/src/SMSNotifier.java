@@ -8,6 +8,6 @@ public class SMSNotifier extends NotifierDecorator {
         // Gọi lại send của các lớp trước đó trong chuỗi
         super.send(msg);
         // Sau đó thực hiện gửi thêm tin nhắn SMS
-        System.out.println("Gửi SMS với nội dung: " + msg);
+        System.out.println("SMS notification: " + msg);
     }
 }

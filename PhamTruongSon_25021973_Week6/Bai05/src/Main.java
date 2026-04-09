@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         // 1. Singleton
         System.out.println("--- Singleton Test ---");
-        Logger.getInstance().log("Hệ thống bắt đầu chạy.");
+        Logger.getInstance().log("Running ...");
 
         // 2. Factory Method
         System.out.println("\n--- Factory Method Test ---");

@@ -2,7 +2,7 @@
 
 class SmsNotification implements Notification {
 
-    @Override
+    @Override // -> QUyết định kiểu (Ở đây chỉ in thông điệp khác)
     public void send(String msg) {
         System.out.println("Sending SMS: " + msg);
     }

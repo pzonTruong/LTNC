@@ -6,6 +6,6 @@ public class FacebookNotifier extends NotifierDecorator {
     @Override
     public void send(String msg) {
         super.send(msg);
-        System.out.println("Gửi thông báo Facebook với nội dung: " + msg);
+        System.out.println("Facebook notification: " + msg);
     }
 }

@@ -21,4 +21,8 @@ public class Main {
         app = new Application(factory);
         app.paint();
     }
+
+    // Áp dụng Abstract Factory Pattern
+    // sử dụng Singleton Pattern để đảm bảo chỉ có một instance của mỗi factory
+    // sử dụng nguyên lí open/closed để dễ dàng mở rộng thêm các loại giao diện khác trong tương lai
 }

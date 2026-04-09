@@ -9,22 +9,17 @@ public class AppConfig {
 
     // 2. Private constructor: Ngăn chặn việc khởi tạo đối tượng từ bên ngoài bằng từ khóa 'new'
     private AppConfig() {
-        // Giả lập việc đọc cấu hình từ file hoặc DB
+        // Giả lập data
         this.appName = "My Awesome App";
         this.version = "1.0.0";
         this.logLevel = "DEBUG";
     }
 
     // 3. Phương thức getInstance() theo kiểu Lazy Initialization & Double-Checked Locking
-    public static AppConfig getInstance() {
+    public static synchronized AppConfig getInstance() { // synchronized: đề phòng khi 2 luồng gọi 1 điểm mà instance vẫn đang null (có thể tạo 2 đối tượng khác nhau)
         // Kiểm tra lần 1: Nếu instance đã tồn tại thì return ngay, không cần vào block synchronized (tăng hiệu năng)
-        if (instance == null) {
-            synchronized (AppConfig.class) {
-                // Kiểm tra lần 2: Đảm bảo nếu 2 luồng cùng vào đến đây thì chỉ luồng đầu tiên được tạo object
-                if (instance == null) {
-                    instance = new AppConfig();
-                }
-            }
+        if (instance == null){
+            instance = new AppConfig();
         }
         return instance;
     }

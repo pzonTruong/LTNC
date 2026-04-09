@@ -16,5 +16,7 @@ public class Main {
         // Kích hoạt chạy các luồng
         thread1.start();
         thread2.start();
+
+        // Hashcode giống nhau -> Chỉ có 1, và 1 đối tượng duy nhất được tạo ra
     }
 }

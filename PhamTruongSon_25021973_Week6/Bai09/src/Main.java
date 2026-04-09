@@ -9,7 +9,7 @@ public class Main {
         MediaPlayer myMediaSystem = new MediaPlayer(myAudio, myVideo);
 
         // Vận hành hệ thống
-        System.out.println("--- Hệ thống giải trí đa phương tiện ---");
+        System.out.println("MEDIA SYSTEM OPERATION:");
         myMediaSystem.playMusic("Chills_Lofi_Beats.mp3");
         myMediaSystem.playMovie("Design_Patterns_Tutorial.mp4");
     }
