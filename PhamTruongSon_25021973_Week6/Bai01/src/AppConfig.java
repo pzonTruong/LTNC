@@ -17,7 +17,7 @@ public class AppConfig {
 
     // 3. Phương thức getInstance() theo kiểu Lazy Initialization & Double-Checked Locking
     public static synchronized AppConfig getInstance() { // synchronized: đề phòng khi 2 luồng gọi 1 điểm mà instance vẫn đang null (có thể tạo 2 đối tượng khác nhau)
-        // Kiểm tra lần 1: Nếu instance đã tồn tại thì return ngay, không cần vào block synchronized (tăng hiệu năng)
+        // Kiểm tra: Nếu instance đã tồn tại thì return ngay, không cần vào block synchronized (tăng hiệu năng)
         if (instance == null){
             instance = new AppConfig();
         }

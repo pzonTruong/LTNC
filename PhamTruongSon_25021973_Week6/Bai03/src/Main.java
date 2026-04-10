@@ -6,7 +6,7 @@ public class Main {
         UIFactory factory;
 
         // Giả lập nhận tham số cấu hình
-        String osType = "win"; // Hoặc "mac"
+        String osType = "win";
 
         if (osType.equalsIgnoreCase("win")) {
             factory = new WindowsFactory();
