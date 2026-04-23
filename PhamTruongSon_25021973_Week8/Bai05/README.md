@@ -1,10 +1,9 @@
-# Mo ta loi giai
+# Bài 5: The Delivery Calculator
 
-## Tom tat y tuong chinh cua loi giai
-(Dien y tuong cua ban tai day)
+## 1. Phân tích Shotgun Surgery
+* Ở thiết kế cũ, khi thêm loại đơn hàng **Bulky**, ta phải sửa đồng thời cả hàm tính phí và hàm lấy nhãn trong lớp `Order`.
 
-## Ly do lua chon huong tiep can nay? Uu diem so voi cac cach khac
-(Dien ly do cua ban tai day)
-
-## Cach chay
-Chay lenh: ./run.sh
+## 2. Cấu trúc đa hình
+* **Lớp cha `Order`:** Định nghĩa các phương thức trừu tượng `getDeliveryFee()` và `getLabel()`.
+* **Lớp con:** Mỗi loại đơn hàng (`Standard`, `Express`, `Fragile`, `Bulky`) tự thực hiện công thức riêng.
+* **Kết quả:** Code tuân thủ nguyên tắc Open/Closed (OCP).

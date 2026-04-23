@@ -1,10 +1,16 @@
-# Mo ta loi giai
+# Bài 6: The God Class
 
-## Tom tat y tuong chinh cua loi giai
-(Dien y tuong cua ban tai day)
+## 1. Trách nhiệm của StudentManager (Cũ)
+* Lưu thông tin cá nhân.
+* Lưu thông tin môn học.
+* Tính toán điểm số.
+* In bảng điểm.
 
-## Ly do lua chon huong tiep can nay? Uu diem so voi cac cach khac
-(Dien ly do cua ban tai day)
+## 2. Thiết kế mới (Extract Class)
+* `Student`: Chỉ quản lý ID và Tên.
+* `Course`: Quản lý thông tin môn học và tín chỉ.
+* `Grade`: Quản lý điểm thành phần và logic xếp loại.
+* `TranscriptPrinter`: Kết hợp các đối tượng trên để hiển thị.
 
-## Cach chay
-Chay lenh: ./run.sh
+## 3. Mở rộng
+* Sử dụng lớp cha `Person` để hỗ trợ thêm các đối tượng khác như `TeachingAssistant`.
