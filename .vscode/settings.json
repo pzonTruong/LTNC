@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        "PhamTruongSon_25021973_Week8/Bai09/src"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "PhamTruongSon_25021973_Week8/Bai09/lib/junit-platform-console-standalone-1.10.2-javadoc.jar",
+        "PhamTruongSon_25021973_Week8/Bai09/lib/junit-platform-console-standalone-1.10.2.jar"
+    ]
+}

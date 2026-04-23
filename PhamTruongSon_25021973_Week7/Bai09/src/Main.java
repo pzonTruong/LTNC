@@ -8,7 +8,7 @@ public class Main {
         for (int i = 0; i < numThreads; i++) {
             threads[i] = new Thread(() -> {
                 for (int j = 0; j < incrementsPerThread; j++) {
-                    // Bạn có thể đổi sang increment() để xem kết quả tuyệt đối 40000
+                    // có thể đổi sang increment() để xem kết quả tuyệt đối 40000
                     counter.incrementWithTryLock();
                 }
             }, "Thread-" + i);

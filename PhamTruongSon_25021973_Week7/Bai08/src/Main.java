@@ -52,4 +52,9 @@ public class Main {
         pool2.shutdown();
         sc.close();
     }
+
+//     Tại sao yêu cầu "(Optional)" lại bảo không nên gọi submit Pool 2 bên trong Task của Pool 1?
+
+// Trả lời: Nếu Task 1 gọi trực tiếp Task 2 và đợi nó, luồng ở Pool 1 sẽ bị chiếm dụng để "ngồi chờ", dẫn đến lãng phí luồng. 
+// Cách dùng CompletableFuture hoặc dùng một luồng điều phối bên ngoài giúp giải phóng luồng Pool 1 ngay khi nó làm xong việc.
 }
