@@ -6,4 +6,4 @@
 
 ## 2. Giải pháp
 * **Intermediate Classes:** Tách thành `GasVehicle` và `ElectricVehicle` để chứa các thuộc tính đặc thù.
-* **Template Method Pattern:** Đưa logic nối chuỗi `getInfo()` lên lớp cha, các lớp con chỉ cung cấp tên loại xe qua `getVehicleType()`.
+* **Template Method Pattern:** Đưa logic nối chuỗi `getInfo()` lên lớp cha, các lớp con chỉ cung cấp tên loại xe qua `getVehicleType()`.    
