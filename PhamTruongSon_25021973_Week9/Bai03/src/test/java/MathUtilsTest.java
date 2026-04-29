@@ -16,7 +16,7 @@ class MathUtilsTest {
     @Test
     @DisplayName("Should return correct sum of two integers")
     void testAdd() {
-        assertEquals(99, mathUtils.add(7, 3), "7 + 3 should be 10");
+        assertEquals(99, mathUtils.add(7, 3), "7 + 3 should be 10");  // Failed test case
     }
 
     @Test

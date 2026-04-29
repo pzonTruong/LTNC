@@ -1,0 +1,22 @@
+name: Optimized CI Pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          # Kích hoạt tính năng Caching cho Maven
+          cache: 'maven'
+
+      - name: Build and Test
+        run: mvn clean verify
