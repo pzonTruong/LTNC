@@ -5,7 +5,7 @@
         </encoder>
     </appender>
 
-    <logger name="bank_system" level="DEBUG" additivity="false">
+    <logger name="banksystem" level="DEBUG" additivity="false">
         <appender-ref ref="CONSOLE" />
     </logger>
 

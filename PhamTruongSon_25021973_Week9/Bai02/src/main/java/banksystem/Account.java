@@ -1,4 +1,4 @@
-package bank_system;
+package banksystem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Lớp trừu tượng đại diện cho một tài khoản ngân hàng.
+ * Abstract class representing a bank account.
  */
 public abstract class Account {
   private static final Logger logger = LoggerFactory.getLogger(Account.class);
@@ -19,7 +19,7 @@ public abstract class Account {
   protected List<Transaction> transactions;
 
   /**
-   * Khởi tạo tài khoản với số tài khoản và số dư ban đầu.
+   * Initializes account with account number and initial balance.
    */
   public Account(long accountNumber, double balance) {
     this.accountNumber = accountNumber;
@@ -64,6 +64,9 @@ public abstract class Account {
     balance -= amount;
   }
 
+  /**
+   * Adds a transaction to the account history.
+   */
   public void addTransaction(Transaction transaction) {
     if (transaction != null) {
       transactions.add(transaction);
@@ -71,11 +74,11 @@ public abstract class Account {
   }
 
   /**
-   * Lấy lịch sử giao dịch dưới dạng chuỗi.
+   * Returns transaction history as a string.
    */
   public String getTransactionHistory() {
     StringBuilder sb = new StringBuilder();
-    sb.append("Lịch sử giao dịch của tài khoản ").append(accountNumber).append(":\n");
+    sb.append("Transaction history for account ").append(accountNumber).append(":\n");
     for (int i = 0; i < transactions.size(); i++) {
       sb.append(transactions.get(i).getTransactionSummary());
       if (i < transactions.size() - 1) {

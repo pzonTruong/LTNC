@@ -1,9 +1,9 @@
 package com.example;
 
-import java.io.File;
+import java.nio.file.Path;
 
 public class FileUtils {
     public static String getProjectDataPath(String fileName) {
-        return "data" + File.separator + "storage" + File.separator + fileName;
+        return Path.of("data", "storage", fileName).toString();
     }
 }

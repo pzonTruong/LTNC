@@ -1,19 +1,17 @@
 package com.example;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.File;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import org.junit.jupiter.api.Test;
-
 public class FileUtilsTest {
+
     @Test
-    void testFilePathFormat() {
-        String path = FileUtils.getProjectDataPath("config.json");
-        System.out.println("Testing path: " + path);
+    public void testGetProjectDataPath() {
+        String fileName = "config.json";
+        String expected = "data" + File.separator + "storage" + File.separator + fileName;
+        String actual = FileUtils.getProjectDataPath(fileName);
         
-        // Kiểm tra xem đường dẫn có hợp lệ với hệ thống hiện tại không
-        File file = new File(path);
-        // Trên Linux/macOS, File(path) với dấu \ sẽ coi nguyên chuỗi là tên file thay vì thư mục
-        assertTrue(path.contains(File.separator), "Path should use the correct system separator");
+        assertEquals(expected, actual, "Path should be constructed using the system's file separator");
     }
 }

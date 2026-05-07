@@ -1,11 +1,11 @@
-package bank_system;
+package banksystem;
 
 import java.util.Locale;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Đại diện cho một giao dịch tài chính.
+ * Class representing a financial transaction.
  */
 public class Transaction {
   private static final Logger logger = LoggerFactory.getLogger(Transaction.class);
@@ -20,6 +20,9 @@ public class Transaction {
   private double initialBalance;
   private double finalBalance;
 
+  /**
+   * Initializes a transaction record.
+   */
   public Transaction(int type, double amount, double initialBalance, double finalBalance) {
     this.type = type;
     this.amount = amount;
@@ -28,30 +31,30 @@ public class Transaction {
   }
 
   /**
-   * Chuyển đổi mã loại giao dịch sang chuỗi mô tả.
+   * Converts transaction type code to a descriptive string.
    */
   public static String getTypeString(int typeCode) {
     switch (typeCode) {
       case TYPE_DEPOSIT_CHECKING:
-        return "Nạp tiền vãng lai";
+        return "Checking Deposit";
       case TYPE_WITHDRAW_CHECKING:
-        return "Rút tiền vãng lai";
+        return "Checking Withdrawal";
       case TYPE_DEPOSIT_SAVINGS:
-        return "Nạp tiền tiết kiệm";
+        return "Savings Deposit";
       case TYPE_WITHDRAW_SAVINGS:
-        return "Rút tiền tiết kiệm";
+        return "Savings Withdrawal";
       default:
-        return "Không rõ";
+        return "Unknown";
     }
   }
 
   /**
-   * Trả về tóm tắt giao dịch theo định dạng yêu cầu.
+   * Returns a summary of the transaction.
    */
   public String getTransactionSummary() {
-    logger.info("Generating summary for transaction type: {}", type);
+    logger.debug("Generating summary for transaction type: {}", type);
     return String.format(Locale.US,
-        "- Kiểu giao dịch: %s. Số dư ban đầu: $%.2f. Số tiền: $%.2f. Số dư cuối: $%.2f.",
+        "- Type: %s. Initial Balance: $%.2f. Amount: $%.2f. Final Balance: $%.2f.",
         getTypeString(type), initialBalance, amount, finalBalance);
   }
 }
