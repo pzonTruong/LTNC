@@ -1,0 +1,26 @@
+May 14, 2026 1:29:32 PM MultiThreadedServer start
+INFO: Server starting on port 5000
+May 14, 2026 1:29:32 PM MultiThreadedServer start
+INFO: Server is listening...
+May 14, 2026 1:29:42 PM MultiThreadedServer start
+INFO: New client connected: 127.0.0.1:64822
+May 14, 2026 1:29:42 PM ClientHandler run
+INFO: Handling client: 127.0.0.1:64822
+May 14, 2026 1:29:49 PM MultiThreadedServer start
+INFO: New client connected: 127.0.0.1:64823
+May 14, 2026 1:29:49 PM ClientHandler run
+INFO: Handling client: 127.0.0.1:64823
+May 14, 2026 1:29:51 PM ClientHandler run
+INFO: Message from 127.0.0.1:64823: heello
+May 14, 2026 1:30:12 PM ClientHandler run
+INFO: Message from 127.0.0.1:64822: dsjnsf
+May 14, 2026 1:30:16 PM ClientHandler run
+INFO: Message from 127.0.0.1:64822: dsakmds
+May 14, 2026 1:30:27 PM ClientHandler run
+INFO: Message from 127.0.0.1:64823: fava
+May 14, 2026 1:30:39 PM ClientHandler run
+INFO: Message from 127.0.0.1:64823: fwfqq
+May 14, 2026 1:30:48 PM ClientHandler run
+INFO: Connection closed: 127.0.0.1:64823
+May 14, 2026 1:30:51 PM ClientHandler run
+INFO: Connection closed: 127.0.0.1:64822

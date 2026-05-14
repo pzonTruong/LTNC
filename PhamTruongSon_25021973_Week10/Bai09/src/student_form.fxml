@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="650.0" prefWidth="580.0" spacing="30.0" styleClass="root-container" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <children>
+        <Label id="header-label" text="STUDENT REGISTRATION">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        
+        <GridPane hgap="25.0" vgap="25.0">
+            <padding>
+                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+            </padding>
+            <children>
+                <!-- Full Name -->
+                <Label text="Full Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="nameField" promptText="Enter full name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                
+                <!-- Email -->
+                <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="emailField" promptText="example@email.com" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                
+                <!-- Gender -->
+                <Label text="Gender:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <HBox spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <children>
+                        <RadioButton mnemonicParsing="false" text="Male">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="genderGroup" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" text="Female" toggleGroup="$genderGroup" />
+                        <RadioButton mnemonicParsing="false" text="Other" toggleGroup="$genderGroup" />
+                    </children>
+                </HBox>
+                
+                <!-- Major -->
+                <Label text="Major:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <ComboBox fx:id="majorComboBox" prefWidth="300.0" promptText="Select a Major" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                
+                <!-- Interests -->
+                <Label text="Interests:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <VBox spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <children>
+                        <CheckBox fx:id="codingCheck" mnemonicParsing="false" text="Coding" />
+                        <CheckBox fx:id="musicCheck" mnemonicParsing="false" text="Music" />
+                        <CheckBox fx:id="sportsCheck" mnemonicParsing="false" text="Sports" />
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+        
+        <VBox alignment="CENTER" spacing="10.0">
+            <children>
+                <HBox alignment="CENTER" spacing="12.0">
+                    <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                    </padding>
+                    <children>
+                        <Button fx:id="submitButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSubmit" styleClass="btn-primary" text="Register Now" />
+                        <Button fx:id="saveButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSave" styleClass="btn-success" text="Save to DB" />
+                        <Button fx:id="loadButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLoad" styleClass="btn-info" text="Load from DB" />
+                        <Button fx:id="clearButton" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClear" styleClass="btn-secondary" text="Clear Form" />
+                    </children>
+                </HBox>
+                <Label fx:id="statusLabel" alignment="CENTER" textAlignment="CENTER" />
+            </children>
+        </VBox>
+    </children>
+</VBox>
